@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class OnClickCube : MonoBehaviour
 {
@@ -12,22 +13,40 @@ public class OnClickCube : MonoBehaviour
         anEvent.Invoke();
     }
 
-    Vector3 targetPosition = new Vector3(0, 1.5f, 20);
     public void EventClick(GameObject obj)
     {
         Debug.Log("object name............" + obj.name);
 
-        if (GameUI.Instance.selectedType == GameUI.enSelectedType.Gravity)
+        switch (GameUI.Instance.selectedType)
         {
-            if (obj.transform.position.x < 1f)
-            {
-                obj.GetComponent<Rigidbody>().useGravity = false;
+            case GameUI.enSelectedType.Gravity:
+                    if (obj.transform.position.y < 1f)
+                    {
+                        obj.GetComponent<Rigidbody>().useGravity = false;
 
-                //obj.transform.position = new Vector3(obj.transform.position.x, 1f, obj.transform.position.z);
+                        obj.transform.DOMoveY(1.7f, 1f);
+                    }
+                break;
+            case GameUI.enSelectedType.Destroy:
 
-                obj.transform.position = Vector3.Lerp(transform.position, targetPosition, 0.5f * Time.deltaTime);
+                obj.SetActive(false);
 
-            }
-        }
+                GameObject cubeObj = obj.transform.parent.gameObject;
+
+                Destroy(obj);
+
+                if (cubeObj != null)
+                {
+                    cubeObj.transform.DOMoveY(1.7f, 1f);
+                }
+                break;
+            case GameUI.enSelectedType.Shape:
+                break;
+            case GameUI.enSelectedType.Magic:
+                break;
+            case GameUI.enSelectedType.None:
+                Debug.Log("Please select action");
+                break;
+        }        
     }
 }

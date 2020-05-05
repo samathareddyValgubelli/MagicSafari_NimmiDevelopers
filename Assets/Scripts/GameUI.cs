@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
+using TMPro;
 
 public class GameUI : MonoBehaviour
 {
+    public TextMeshProUGUI levelText;
+
+    private static int levelNumber;
+
     private static GameUI instance = null;
 
     // Game Instance Singleton
@@ -27,6 +31,8 @@ public class GameUI : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(this.gameObject);
+
+        levelNumber = 1;
     }
 
     public enum enSelectedType
@@ -65,6 +71,16 @@ public class GameUI : MonoBehaviour
                 selectedType = enSelectedType.None;
                 break;
         }
+    }
+
+    public void OnClickRestart()
+    {
+
+    }
+
+    public void OnClickNext()
+    {
+
     }
    
 }

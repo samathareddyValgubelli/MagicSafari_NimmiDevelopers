@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1319120317760278839}
   - component: {fileID: 1319120317760278838}
   - component: {fileID: 1319120317760278837}
+  - component: {fileID: 5358178416592065845}
   m_Layer: 0
   m_Name: DestroyObject
   m_TagString: Untagged
@@ -91,6 +92,34 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5358178416592065845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319120317760278835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e814514bc2fe0143afda364b3f43109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5358178416592065845}
+        m_MethodName: EventClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1319120317760278835}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1319120318110718768
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +270,6 @@ GameObject:
   - component: {fileID: 1319120318319965727}
   - component: {fileID: 1319120318319965726}
   - component: {fileID: 1319120318319965725}
-  - component: {fileID: 1319120318319965713}
   m_Layer: 0
   m_Name: GravityWithDestroy
   m_TagString: Untagged
@@ -338,34 +366,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1319120318319965713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319120318319965723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e814514bc2fe0143afda364b3f43109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1319120318319965713}
-        m_MethodName: EventClick
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1319120318319965723}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1319120318362691962
 GameObject:
   m_ObjectHideFlags: 0
