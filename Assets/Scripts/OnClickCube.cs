@@ -24,7 +24,10 @@ public class OnClickCube : MonoBehaviour
                     {
                         obj.GetComponent<Rigidbody>().useGravity = false;
 
-                        obj.transform.DOMoveY(1.7f, 1f);
+                        obj.transform.DOMoveY(1.7f, 1f).OnComplete(()=>
+                        {
+                            obj.GetComponent<Rigidbody>().isKinematic = true;
+                        });
                     }
                 break;
             case GameUI.enSelectedType.Destroy:
@@ -37,7 +40,11 @@ public class OnClickCube : MonoBehaviour
 
                 if (cubeObj != null)
                 {
-                    cubeObj.transform.DOMoveY(1.7f, 1f);
+                    cubeObj.transform.DOMoveY(1.7f, 1f).OnComplete(() => {
+
+                        cubeObj.GetComponent<Rigidbody>().isKinematic = true;
+
+                    });
                 }
                 break;
             case GameUI.enSelectedType.Shape:
