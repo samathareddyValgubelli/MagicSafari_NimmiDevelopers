@@ -16,13 +16,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isStopped)
         {
-            transform.Translate(Vector3.forward * Time.deltaTime);
+            transform.Translate(0, 0, Time.deltaTime);
+            //transform.position = new Vector3(0, transform.position.y, transform.position.z);
         }
 
 
         if (Input.GetMouseButtonDown(0))
         {
-            ray = camera.ScreenPointToRay(Input.mousePosition);
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit, 1000))
             {
