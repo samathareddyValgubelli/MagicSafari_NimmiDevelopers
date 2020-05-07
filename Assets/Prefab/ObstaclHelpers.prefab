@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1319120317760278837}
   - component: {fileID: 5358178416592065845}
   - component: {fileID: 159138880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DestroyObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 1319120318110718771}
   - component: {fileID: 1319120318110718770}
   - component: {fileID: 1319120318110718774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GravityPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,8 +166,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319120318110718768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.17, z: 19.37}
-  m_LocalScale: {x: 6, y: 0.558, z: 11.087281}
+  m_LocalPosition: {x: 0, y: 0.17, z: 19.402}
+  m_LocalScale: {x: 6, y: 0.558, z: 11.153806}
   m_Children: []
   m_Father: {fileID: 1319120318362691963}
   m_RootOrder: 0
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 1319120318319965727}
   - component: {fileID: 1319120318319965726}
   - component: {fileID: 1319120318319965725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GravityWithDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,8 +302,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319120318319965723}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.81, z: 55.924}
-  m_LocalScale: {x: 6, y: 0.48, z: 12.664944}
+  m_LocalPosition: {x: 0, y: 8.81, z: 55.762}
+  m_LocalScale: {x: 6, y: 0.48, z: 13.2}
   m_Children:
   - {fileID: 1319120317760278836}
   m_Father: {fileID: 1319120318362691963}
@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319120318362691963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ObstaclHelpers
   m_TagString: Untagged
   m_Icon: {fileID: 0}

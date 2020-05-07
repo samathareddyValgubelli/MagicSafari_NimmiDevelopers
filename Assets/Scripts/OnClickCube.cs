@@ -24,7 +24,7 @@ public class OnClickCube : MonoBehaviour
                     {
                         obj.GetComponent<Rigidbody>().useGravity = false;
 
-                        obj.transform.DOMoveY(1.7f, 1f).OnComplete(()=>
+                        obj.transform.DOMoveY(1.8f, 1f).OnComplete(()=>
                         {
                             obj.GetComponent<Rigidbody>().isKinematic = true;
                         });
@@ -40,7 +40,7 @@ public class OnClickCube : MonoBehaviour
 
                 if (cubeObj != null)
                 {
-                    cubeObj.transform.DOMoveY(1.7f, 1f).OnComplete(() => {
+                    cubeObj.transform.DOMoveY(1.8f, 1f).OnComplete(() => {
 
                         cubeObj.GetComponent<Rigidbody>().isKinematic = true;
 

@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
 {
     public TextMeshProUGUI levelText;
 
-    private static int levelNumber;
+    public int levelNumber;
+
+    public GameObject leveCompletedPopup;
 
     private static GameUI instance = null;
 
@@ -73,15 +76,10 @@ public class GameUI : MonoBehaviour
         }
     }
 
-    public void OnClickRestart()
+    public void LevelCompleted()
     {
-
+        leveCompletedPopup.SetActive(true);
     }
 
-    public void OnClickNext()
-    {
-
-    }
-   
 }
 
